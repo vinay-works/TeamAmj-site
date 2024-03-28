@@ -5,15 +5,15 @@ const Hero = () => {
     <section className='w-full h-[90vh] container mx-auto mb-28 grid grid-cols-2 gap-x-4 place-items-center'>
       <div className='flex flex-col gap-y-3'>
         <div className='flex flex-col items-start'>
-          <p className='text-2xl md:text-7xl font-semibold'>
-            Kickstart Your career
-          </p>
           <span className='flex gap-x-3 items-center justify-center'>
-            <p className='text-2xl md:text-7xl font-semibold'>with</p>
+            <p className='text-2xl md:text-7xl font-semibold'>We</p>
             <p className='text-2xl md:text-7xl font-semibold text-center border-2 border-primary p-2 rounded-full'>
-              YugAmjTeam
+              Create
             </p>
           </span>
+          <p className='text-2xl md:text-7xl font-semibold'>
+            Digital Solutions
+          </p>
         </div>
         <p className='text-lg md:text-2xl font-semibold text-start text-shuttleGray'>
           Internships, IT Courses & Career Launchpads <br />
