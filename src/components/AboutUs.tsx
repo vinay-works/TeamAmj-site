@@ -2,7 +2,7 @@ import AboutUsImage from '../assets/concept-of-unknown-things.svg';
 
 const AboutUsComponent = () => {
   return (
-    <section className='my-[100px] py-6 md:py-[100px] bg-vulcan'>
+    <section className='mt-[100px] py-6 md:py-[150px] bg-vulcan'>
       <div className='container mx-auto p-4'>
         <p className='text-md text-primary font-semibold mb-6'>About us</p>
 

@@ -2,14 +2,14 @@ import { MoveRight } from 'lucide-react';
 
 const Services = () => {
   return (
-    <section className='w-full text-lightGray bg-vulcan mb-[100px] p-[150px]'>
+    <section className='w-full text-lightGray bg-vulcan mb-[50px] md:mb-[100px] p-[26px] lg:p-[150px]'>
       <div className='container mx-auto'>
         <h3 className='text-2xl md:text-4xl font-semibold text-center border-b-2 w-max mx-auto'>
           Our Services
         </h3>
 
-        <div className='w-full h-auto grid grid-cols-2 gap-4 place-items-center my-[100px]'>
-          <div className=' bg-shark grid grid-cols-2 p-14 rounded-md'>
+        <div className='w-full h-auto grid grid-cols-1 lg:grid-cols-2 gap-4 place-items-center my-[30px] lg:my-[100px]'>
+          <div className=' bg-shark grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-y-6 p-8 lg:p-14 rounded-md'>
             <p className='text-primary font-medium border-b h-max w-max leading-loose border-b-primary'>
               01.
             </p>
@@ -30,7 +30,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          <div className=' bg-shark grid grid-cols-2 p-14 rounded-md'>
+          <div className=' bg-shark grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-y-6 p-8 lg:p-14 rounded-md'>
             <p className='text-primary font-medium border-b h-max w-max leading-loose border-b-primary'>
               02.
             </p>
@@ -53,7 +53,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          <div className=' bg-shark grid grid-cols-2 p-14 rounded-md'>
+          <div className=' bg-shark grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-y-6 p-8 lg:p-14 rounded-md'>
             <p className='text-primary font-medium border-b h-max w-max leading-loose border-b-primary'>
               03.
             </p>
@@ -74,7 +74,7 @@ const Services = () => {
               </button>
             </div>
           </div>
-          <div className=' bg-shark grid grid-cols-2 p-14 rounded-md'>
+          <div className=' bg-shark grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 gap-y-6 p-8 lg:p-14 rounded-md'>
             <p className='text-primary font-medium border-b h-max w-max leading-loose border-b-primary'>
               04.
             </p>
