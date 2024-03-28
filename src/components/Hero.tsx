@@ -1,42 +1,78 @@
-import Students from '../assets/students.jpg';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const Hero = () => {
+export default function Hero() {
+  const [services, ] = useState([
+    'IT Solutions',
+    'Digital Marketing',
+    'IT Services',
+    'Non-IT Services',
+    'HR-Solutions',
+  ]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % services.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className='w-full h-[90vh] container mx-auto mb-28 grid grid-cols-2 gap-x-4 place-items-center'>
-      <div className='flex flex-col gap-y-3'>
-        <div className='flex flex-col items-start'>
-          <span className='flex gap-x-3 items-center justify-center'>
-            <p className='text-2xl md:text-7xl font-semibold'>We</p>
-            <p className='text-2xl md:text-7xl font-semibold text-center border-2 border-primary p-2 rounded-full'>
-              Create
-            </p>
-          </span>
-          <p className='text-2xl md:text-7xl font-semibold'>
-            Digital Solutions
-          </p>
+    <div className=" bg-white" >
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
         </div>
-        <p className='text-lg md:text-2xl font-semibold text-start text-shuttleGray'>
-          Internships, IT Courses & Career Launchpads <br />
-          Your Path to Success Starts Here!
-        </p>
-        <p className='text-md md:text-md'>
-          Join Us Today and Ignite Your Career
-        </p>
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-black-600 ring-1 ring-orange-500 ">
+              Welcome to yugAmj Team
+            </div>
+          </div>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              We Create ...
+            </h1>
+            <div className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              {services[index]}
+            </div>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Kickstart Your career with YugAmjTeam
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link to="/services"
+                className="rounded-md bg-orange-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Explore Services
+              </Link>
 
-        <button className=' w-max px-6 py-3 border rounded-full text-sm bg-secondary text-lightGray hover:bg-white hover:text-secondary hover:shadow-md transition duration-200 ease-in'>
-          Explore Services
-        </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+          />
+        </div>
       </div>
-
-      <div className='group h-full overflow-hidden self-center'>
-        <img
-          src={Students}
-          alt='students-bg'
-          className='block w-full object-center object-cover hover:scale-105 transition-all ease-in duration-300 '
-        />
-      </div>
-    </section>
+    </div>
   );
-};
-
-export default Hero;
+}
